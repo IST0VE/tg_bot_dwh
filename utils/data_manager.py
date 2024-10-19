@@ -14,7 +14,6 @@ def save_data(data):
     with open(DATA_FILE, 'w', encoding='utf-8') as file:
         json.dump(data, file, ensure_ascii=False, indent=4)
 
-# Инициализация данных для нового пользователя
 def init_user(data, user_id):
     if user_id not in data["users"]:
         data["users"][user_id] = {
@@ -22,6 +21,6 @@ def init_user(data, user_id):
             "structure": {
                 "folders": {},
                 "files": []
-            }
+            },
+            "file_mappings": {}  # Добавляем поле для сопоставления short_id и file_id
         }
-

@@ -1,5 +1,4 @@
 # handlers/command_handlers.py
-
 from telebot import types
 from telebot.types import Message
 from utils.data_manager import load_data, save_data, init_user

@@ -10,7 +10,16 @@ import time
 import requests
 import logging
 
-logging.basicConfig(level=logging.INFO)
+# Настройка логирования
+logging.basicConfig(
+    level=logging.DEBUG,  # Установите уровень на DEBUG для подробного логирования
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler("bot.log"),
+        logging.StreamHandler()
+    ]
+)
+
 logger = logging.getLogger(__name__)
 
 def start_bot():
