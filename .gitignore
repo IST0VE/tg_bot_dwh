@@ -1,3 +1,4 @@
 config.py
 /venv
 bot.log
+user_data.json
